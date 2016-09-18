@@ -38,6 +38,12 @@ function sendTextMessage(sender, text) {
     })
 }
 
+function fibonacci(num) {
+  if (num <= 1) return 1;
+
+  return fibonacci(num - 1) + fibonacci(num - 2);
+} 
+
 function parseResponse(text) {
     let h = text.indexOf("how")
     let r = text.indexOf("r")
@@ -53,12 +59,6 @@ function parseResponse(text) {
     }else {
         return "sorry i don't understand"
     }
-}
-
-function fibonacci(num) {
-  if (num <= 1) return 1;
-
-  return fibonacci(num - 1) + fibonacci(num - 2);
 }
 
 app.post('/webhook/', function (req, res) {
