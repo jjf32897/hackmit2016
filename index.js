@@ -46,6 +46,8 @@ function parseResponse(text) {
         return "not good"
     } else if (text.indexOf("y") !== -1) {
         return "because i'm dead"
+    } else if (text.indexOf("meme") !== -1){
+        return "the memes make me sad"
     } else {
         return "sorry i don't understand"
     }
