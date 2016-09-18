@@ -49,7 +49,7 @@ function parseResponse(text) {
     } else if (text.indexOf("meme") !== -1){
         return "the memes make me sad"
     } else if (text.indexOf("random") !== -1){
-        return fibonacci (5)
+        return fibonacci(5)
     }else {
         return "sorry i don't understand"
     }
