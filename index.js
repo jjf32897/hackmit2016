@@ -16,7 +16,7 @@ app.use(bodyParser.json())
 
 // Index route
 app.get('/', function (req, res) {
-    res.send('Hello world, I am a chat bot')
+    res.send('Hello world, I am Harambe\'s ghost.')
 })
 
 function sendTextMessage(sender, text) {
@@ -98,7 +98,7 @@ app.post('/webhook/', function (req, res) {
                 sendGenericMessage(sender)
                 continue
             }
-            sendTextMessage(sender, "Text received, echo: " + text.substring(0, 200))
+            sendTextMessage(sender, text.substring(0, 200))
         }
     }
     res.sendStatus(200)
