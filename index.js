@@ -48,9 +48,17 @@ function parseResponse(text) {
         return "because i'm dead"
     } else if (text.indexOf("meme") !== -1){
         return "the memes make me sad"
-    } else {
+    } else if (text.indexOf("random") !== -1){
+        return fibonacci (5)
+    }else {
         return "sorry i don't understand"
     }
+}
+
+function fibonacci(num) {
+  if (num <= 1) return 1;
+
+  return fibonacci(num - 1) + fibonacci(num - 2);
 }
 
 app.post('/webhook/', function (req, res) {
